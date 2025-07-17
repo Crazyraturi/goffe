@@ -31,7 +31,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12">
+    <div className="max-w-6xl mx-auto  container px-4 sm:px-6 md:px-8 py-12">
       {/* Section Header */}
       <div className="text-center mb-10 px-2">
         <h1 className="text-2xl md:text-3xl font-bold text-[#001430]">
@@ -70,7 +70,7 @@ const Testimonials = () => {
 
             {/* Name & Title */}
             <div>
-              <h2 className="text-base font-semibold text-[#001430]">{item.name}</h2>
+              <h2 className=" text-xl font-semibold text-[#001430]">{item.name}</h2>
               <h3 className="text text-[#00BBAE]">{item.title}</h3>
             </div>
           </div>

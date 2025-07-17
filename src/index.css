@@ -1,19 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
 @import "tailwindcss";
 
-
-
-*{
-    font-family: "Baloo 2", sans-serif;
- 
+* {
+  font-family: "Baloo 2", sans-serif;
 }
 
-
 @keyframes updown {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-30px);
+  }
+}
+@keyframes move-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

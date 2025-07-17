@@ -4,10 +4,11 @@ import { Shield, Blocks } from "lucide-react";
 import sun from "../assets/sun.svg";
 import parashuit from "../assets/parasuit.svg";
 import rainbow from "../assets/rainbow.svg";
+import cloud from "../assets/cloud-2.svg"
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-10 items-center px-4 md:px-6 py-10 bg-[#F9F9F9]">
+    <div className="flex flex-col md:flex-row gap-10 items-center px-4 md:px-6 py-10 bg-[#f0ebeb]">
       {/* Left Image with floating icons */}
       <div className="left-div md:block relative flex justify-center md:w-1/2">
         {/* Main Image */}
@@ -22,18 +23,24 @@ const HeroSection = () => {
         <img
           src={sun}
           alt="sun"
-          className="absolute w-25 md:block hidden h-25 top-[+30px] left-[+150px] animate-[updown_5s_ease-in-out_infinite] "
+          className="absolute  md:block hidden h-25 top-[+30px] left-[+130px] a animate-[spin-slow_8s_linear_infinite] "
         />
         <img
           src={parashuit}
           alt="parachute"
-          className="absolute w-25 h-25 hidden md:block bottom-[130px] left-9 animate-[updown_5s_ease-in-out_infinite]"
+          className="absolute  hidden md:block bottom-[110px] left-9 animate-[updown_5s_ease-in-out_infinite]"
         />
         <img
           src={rainbow}
           alt="rainbow"
-          className="absolute w-20 h-20 hidden top-[10%] md:block right-[150px] animate-[updown_5s_ease-in-out_infinite]"
+          className="absolute  hidden top-[10%] md:block right-[160px] animate-[updown_5s_ease-in-out_infinite]"
         />
+         <img
+          src={cloud}
+          alt="cloud"
+           className="absolute  hidden md:block bottom-[130px] right-30  animate-[move-horizontal_4s_ease-in-out_infinite]"
+        />
+        
       </div>
 
       {/* Right Content */}
