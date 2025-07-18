@@ -9,16 +9,12 @@ import cloud from "../assets/cloud-2.svg";
 const HeroSection = () => {
   return (
     <div className="flex flex-col md:flex-row gap-10  items-center px-4 md:px-40  py-10 ">
-      {/* Left Image with floating icons */}
       <div className="left-div md:block  margin-auto relative flex justify-center md:w-1/2">
-        {/* Main Image */}
         <img
           className="rounded-full aspect-square object-cover w-full max-w-[350px] md:max-w-[83%]  shadow-lg"
           src={childPlay}
           alt="children playing img"
         />
-
-        {/* Floating Icons */}
 
         <img
           src={sun}
@@ -42,7 +38,6 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Right Content */}
       <div className="right-div md:w-1/2 mt-10 md:mt-0 text-center md:text-left">
         <h3 className="uppercase font-bold text-[#00BBAE] tracking-wide">
           about us
@@ -57,14 +52,12 @@ const HeroSection = () => {
           popularised.
         </p>
 
-        {/* Bottom Features */}
         <div className="bottom-right mt-10 flex flex-col md:flex-row gap-6 items-center md:items-start justify-center md:justify-start">
           {/* Card 1 */}
           <div className="flex group w-full max-w-xs transition-transform transform hover:-translate-y-2 duration-300 flex-col p-5 rounded-lg items-center bg-white text-center ">
             <div className="relative h-20 w-20 rounded-full bg-white p-3 shadow-[0_0_20px_rgba(34,197,94,0.4)] mb-4 overflow-hidden flex items-center justify-center group">
-              {/* Icon sliding out */}
               <Blocks className="absolute inset-0 m-auto h-12 w-12 text-green-500 transition-all duration-500 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0" />
-              {/* Icon sliding in */}
+
               <Blocks className="absolute inset-0 m-auto h-12 w-12 text-green-500 translate-y-4 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100" />
             </div>
             <h2 className="text-xl font-semibold">Variety of Toys</h2>
@@ -73,12 +66,10 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Card 2 */}
           <div className="flex group w-full max-w-xs transition-transform transform hover:-translate-y-2 duration-300 flex-col p-5 rounded-lg items-center bg-white text-center ">
             <div className="relative h-20 w-20 rounded-full bg-white p-3 shadow-[0_0_20px_rgba(255,140,0,0.4)] mb-4 overflow-hidden flex items-center justify-center group">
-              {/* Icon sliding out */}
               <Shield className="absolute inset-0 m-auto h-12 w-12 text-orange-500 transition-all duration-500 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0" />
-              {/* Icon sliding in */}
+
               <Shield className="absolute inset-0 m-auto h-12 w-12 text-orange-500 translate-y-4 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100" />
             </div>
             <h2 className="text-xl font-semibold">Safety Standards</h2>

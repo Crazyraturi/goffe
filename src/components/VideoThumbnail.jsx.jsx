@@ -5,21 +5,16 @@ import video from "../assets/monkey.jpg";
 const VideoThumbnail = () => {
   return (
     <div className="relative mt-20 mb-20 flex items-center justify-center overflow-hidden min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
-      {/* Background Image */}
       <img
         src={video}
         alt="video"
         className="w-full h-full object-cover absolute inset-0"
       />
 
-      {/* Overlay */}
       <div className="absolute inset-0 flex items-center justify-center">
-        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/30 z-0" />
 
-        {/* Spinner and play icon */}
         <div className="relative w-24 h-24 md:w-32 md:h-32 flex items-center justify-center z-10">
-          {/* Circular Spinner SVG */}
           <svg
             className="absolute animate-[spin-slow_8s_linear_infinite] w-full h-full"
             viewBox="0 0 200 200"
@@ -40,7 +35,6 @@ const VideoThumbnail = () => {
             </text>
           </svg>
 
-          {/* Play Button */}
           <Play
             fill="#00BBAE"
             className="h-14 w-14 md:h-20 md:w-20 text-[#00BBAE] bg-white rounded-full p-3 shadow-xl cursor-pointer hover:scale-110 transition-transform duration-300"

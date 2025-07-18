@@ -4,7 +4,6 @@ const Feature = () => {
   return (
     <div className="w-full max-w-7xl mt-20 bg-[F9F9F] mx-auto  px-4 sm:px-6 md:px-8 ">
       <div className="grid  sm:gap-8  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {/* CARD 1 */}
         <FeatureCard
           Icon={Scroll}
           title="Our History"
@@ -12,7 +11,6 @@ const Feature = () => {
           bgColor="#00BBAE"
         />
 
-        {/* CARD 2 */}
         <FeatureCard
           Icon={LandPlot}
           title="Our Vision"
@@ -20,7 +18,6 @@ const Feature = () => {
           bgColor="#FB923C"
         />
 
-        {/* CARD 3 */}
         <FeatureCard
           Icon={Eye}
           title="Our Values"
@@ -39,10 +36,8 @@ const FeatureCard = ({ Icon, title, description, bgColor }) => {
         className="relative h-[72px] w-[72px]  rounded-full"
         style={{ backgroundColor: bgColor }}
       >
-        {/* Default Icon */}
         <Icon className="absolute inset-0 m-auto h-[36px] w-[42px] text-white transition-all duration-500 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0" />
 
-        {/* Hover Icon */}
         <Icon className="absolute inset-0 m-auto h-[36px] w-[42px] text-white opacity-0 translate-y-4 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100" />
       </div>
 

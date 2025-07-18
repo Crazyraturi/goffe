@@ -53,21 +53,19 @@ const TestimonialSlider = ({ testimonials }) => {
         {testimonials.map((item, index) => (
           <div key={index} className="px-3 group">
             <div className="bg-white min-h-[340px] p-4 rounded-xl flex flex-col gap-3 items-center justify-between text-center">
-              
-              {/* Image with rotating icon */}
               <div className="relative w-fit">
                 <img
                   src={item.image}
                   alt={item.name}
                   className="rounded-full h-24 w-24 object-cover shadow p-1 border border-[#F9F9F9]"
                 />
-                <Quote  fill="white"
+                <Quote
+                  fill="white"
                   className="absolute bottom-1 right-0  bg-[#00BBAE] rounded-full p-1 w-6 h-6 text-white transition-transform duration-700 ease-in-out group-hover:rotate-y-180
 "
                 />
               </div>
 
-              {/* Stars */}
               <div className="flex gap-1 mb-1 justify-center">
                 {Array.from({ length: 5 }).map((_, idx) => (
                   <Star
@@ -78,12 +76,10 @@ const TestimonialSlider = ({ testimonials }) => {
                 ))}
               </div>
 
-              {/* Feedback text */}
               <p className="text-[#001851] text-lg leading-relaxed min-h-[112px] line-clamp-4">
                 {item.feedback || "No feedback provided."}
               </p>
 
-              {/* Name and title */}
               <div>
                 <h2 className="text-xl font-semibold text-[#00BBAE]">
                   {item.name}

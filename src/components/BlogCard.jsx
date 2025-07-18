@@ -6,7 +6,6 @@ import { CircleUserRound } from "lucide-react";
 const BlogCard = ({ Image, Tag }) => {
   return (
     <div className="w-[300px] p-1 h-auto border-[#E8E6E6] rounded-lg overflow-hidden bg-[#FFFF] shadow">
-      {/* image div */}
       <div className="relative p-3 rounded-lg">
         <img
           className="w-full h-60  rounded-lg object-cover"

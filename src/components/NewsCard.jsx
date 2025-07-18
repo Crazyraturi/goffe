@@ -5,7 +5,6 @@ import { Calendar } from "lucide-react";
 const NewsCard = ({ Image }) => {
   return (
     <div className="flex items-start gap-4">
-      {/* Image */}
       <div className="flex-shrink-0">
         <img
           className="h-[70px] w-[70px] rounded-lg object-cover"
@@ -14,7 +13,6 @@ const NewsCard = ({ Image }) => {
         />
       </div>
 
-      {/* Text Content */}
       <div className="flex flex-col">
         <h1 className="font-medium  max-w-[250px] hover:text-[#00BBAE] line-clamp-2 leading-tight">
           Toy Emporium: Playful Picks for Kids’ Delightful Days
