@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from '../components/HeroSection'
+import HeroSection from '../components/HeroSection.jsx'
 import Feature from '../components/Feature'
 import VideoThumbnail from '../components/VideoThumbnail.jsx'
 import Testemonials from '../components/Testemonials.jsx'
