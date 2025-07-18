@@ -4,12 +4,12 @@ import video from "../assets/monkey.jpg";
 
 const VideoThumbnail = () => {
   return (
-    <div className="relative mt-20 mb-20 flex items-center justify-center overflow-hidden">
+    <div className="relative mt-20 mb-20 flex items-center justify-center overflow-hidden min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
       {/* Background Image */}
       <img
         src={video}
         alt="video"
-        className="w-full "
+        className="w-full h-full object-cover absolute inset-0"
       />
 
       {/* Overlay */}
@@ -18,7 +18,7 @@ const VideoThumbnail = () => {
         <div className="absolute inset-0 bg-black/30 z-0" />
 
         {/* Spinner and play icon */}
-        <div className="relative w-24 h-24  md:w-50 md:h-40 flex items-center justify-center z-10">
+        <div className="relative w-24 h-24 md:w-32 md:h-32 flex items-center justify-center z-10">
           {/* Circular Spinner SVG */}
           <svg
             className="absolute animate-[spin-slow_8s_linear_infinite] w-full h-full"
@@ -32,7 +32,7 @@ const VideoThumbnail = () => {
             </defs>
             <text
               fill="white"
-              className="uppercase text-[12px] sm:text-[14px] md:text-[18px] font-semibold tracking-wide"
+              className="uppercase text-[15px] sm:text-[14px] md:text-[18px] font-semibold tracking-wide"
             >
               <textPath href="#circlePath" startOffset="0" textLength="470">
                 Watch Video  *  Watch Video * Watch Video *
@@ -41,8 +41,9 @@ const VideoThumbnail = () => {
           </svg>
 
           {/* Play Button */}
-          <Play  fill="#00BBAE"
-            className="h-15 w-15 md:h-20 md:w-20 text-[#00BBAE]  bg-white rounded-full p-3 shadow-xl cursor-pointer hover:scale-110 transition-transform duration-300"
+          <Play
+            fill="#00BBAE"
+            className="h-14 w-14 md:h-20 md:w-20 text-[#00BBAE] bg-white rounded-full p-3 shadow-xl cursor-pointer hover:scale-110 transition-transform duration-300"
           />
         </div>
       </div>
