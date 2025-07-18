@@ -10,7 +10,7 @@ import Subscribe from '../components/SubscribeComp.jsx'
 
 const Aboutus = () => {
   return (
-    <div>
+    <div className='bg-[#F9F9F9]'>
         <HeroSection/>
         <Feature/>
         <VideoThumbnail/>

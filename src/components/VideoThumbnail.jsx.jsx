@@ -18,7 +18,7 @@ const VideoThumbnail = () => {
         <div className="absolute inset-0 bg-black/30 z-0" />
 
         {/* Spinner and play icon */}
-        <div className="relative w-24 h-24  md:w-50 md:h-50 flex items-center justify-center z-10">
+        <div className="relative w-24 h-24  md:w-50 md:h-40 flex items-center justify-center z-10">
           {/* Circular Spinner SVG */}
           <svg
             className="absolute animate-[spin-slow_8s_linear_infinite] w-full h-full"
@@ -42,7 +42,7 @@ const VideoThumbnail = () => {
 
           {/* Play Button */}
           <Play  fill="#00BBAE"
-            className="h-15 w-15 md:h-28 md:w-28 text-[#00BBAE]  bg-white rounded-full p-3 shadow-xl cursor-pointer hover:scale-110 transition-transform duration-300"
+            className="h-15 w-15 md:h-20 md:w-20 text-[#00BBAE]  bg-white rounded-full p-3 shadow-xl cursor-pointer hover:scale-110 transition-transform duration-300"
           />
         </div>
       </div>

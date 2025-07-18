@@ -4,16 +4,16 @@ import { Shield, Blocks } from "lucide-react";
 import sun from "../assets/sun.svg";
 import parashuit from "../assets/parasuit.svg";
 import rainbow from "../assets/rainbow.svg";
-import cloud from "../assets/cloud-2.svg"
+import cloud from "../assets/cloud-2.svg";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-10  items-center px-4 md:px-40  py-10 bg-[#f0ebeb]">
+    <div className="flex flex-col md:flex-row gap-10  items-center px-4 md:px-40  py-10 ">
       {/* Left Image with floating icons */}
       <div className="left-div md:block  margin-auto relative flex justify-center md:w-1/2">
         {/* Main Image */}
         <img
-          className="rounded-full aspect-square object-cover w-full max-w-[300px] md:max-w-[80%]  shadow-lg"
+          className="rounded-full aspect-square object-cover w-full max-w-[350px] md:max-w-[83%]  shadow-lg"
           src={childPlay}
           alt="children playing img"
         />
@@ -23,24 +23,23 @@ const HeroSection = () => {
         <img
           src={sun}
           alt="sun"
-          className="absolute  md:block hidden w-20 h-20 top-[+10px] left-[+20px] a animate-[spin-slow_8s_linear_infinite] "
+          className="absolute  sm:block md:block hidden w-20 h-20 top-[+10px] left-[+20px] a animate-[spin-slow_8s_linear_infinite] "
         />
         <img
           src={parashuit}
           alt="parachute"
-          className="absolute hidden md:block bottom-[20px] left-10 animate-[updown_5s_ease-in-out_infinite]"
+          className="absolute hidden  sm:block md:block bottom-[20px] left-10 animate-[updown_5s_ease-in-out_infinite]"
         />
         <img
           src={rainbow}
           alt="rainbow"
-          className="absolute   hidden top-[10%] md:block right-[100px] animate-[updown_5s_ease-in-out_infinite]"
+          className="absolute   sm:block  hidden top-[10%] md:block right-[100px] animate-[updown_5s_ease-in-out_infinite]"
         />
-         <img
+        <img
           src={cloud}
           alt="cloud"
-           className="absolute    hidden md:block bottom-[20px] right-40  animate-[move-horizontal_4s_ease-in-out_infinite]"
+          className="absolute   sm:block   hidden md:block bottom-[20px] right-40  animate-[move-horizontal_4s_ease-in-out_infinite]"
         />
-        
       </div>
 
       {/* Right Content */}

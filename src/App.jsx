@@ -5,8 +5,8 @@ import BlogPage from './pages/BlogPages'
 const App = () => {
   return (
     <div>
-   {/* <Aboutus/> */}
-      <BlogPage/>
+   <Aboutus/>
+      {/* <BlogPage/> */}
     </div>
   )
 }

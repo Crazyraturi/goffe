@@ -3,7 +3,7 @@ import subscribeImg from '../assets/subscribe_01.svg';
 
 const Subscribe = () => {
   return (
-    <div className="bg-[#001430] mb-10   text-white mt-20 flex flex-col md:flex-row items-center justify-between px-6 py-8 rounded-xl shadow-md gap-6">
+    <div className="bg-[#001430] mt-10    text-white mb-10 flex flex-col md:flex-row items-center justify-between px-10 py-10 rounded-xl shadow-md gap-6">
       
       {/* Left Side - Image and Text */}
       <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start text-center md:text-left">
