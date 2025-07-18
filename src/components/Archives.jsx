@@ -13,7 +13,7 @@ const Archives = () => {
         size={16}
         className="text-[#00BBAE] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
       />
-      <h3 className="text-gray-500 font-bold group-hover:text-[#00BBAE] group-hover:translate-x-2 transition-all">
+      <h3 className="text-gray-500 bold group-hover:text-[#00BBAE] group-hover:translate-x-2 transition-all">
         December 2023 (14)
       </h3>
     </div>
