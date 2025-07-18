@@ -1,15 +1,15 @@
 import React from "react";
-import { PlayCircle } from "lucide-react";
+import { Play } from "lucide-react";
 import video from "../assets/monkey.jpg";
 
 const VideoThumbnail = () => {
   return (
-    <div className="relative w-full mt-20 flex items-center justify-center overflow-hidden rounded-xl">
+    <div className="relative mt-20 mb-20 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <img
         src={video}
         alt="video"
-        className="w-full max-h-[800px] object-cover rounded-xl"
+        className="w-full "
       />
 
       {/* Overlay */}
@@ -18,10 +18,10 @@ const VideoThumbnail = () => {
         <div className="absolute inset-0 bg-black/30 z-0" />
 
         {/* Spinner and play icon */}
-        <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 flex items-center justify-center z-10">
+        <div className="relative w-24 h-24  md:w-50 md:h-50 flex items-center justify-center z-10">
           {/* Circular Spinner SVG */}
           <svg
-            className="absolute animate-spin-slow w-full h-full"
+            className="absolute animate-[spin-slow_8s_linear_infinite] w-full h-full"
             viewBox="0 0 200 200"
           >
             <defs>
@@ -35,13 +35,15 @@ const VideoThumbnail = () => {
               className="uppercase text-[12px] sm:text-[14px] md:text-[18px] font-semibold tracking-wide"
             >
               <textPath href="#circlePath" startOffset="0" textLength="470">
-                 Watch Video  *  Watch Video * Watch Video * 
+                Watch Video  *  Watch Video * Watch Video *
               </textPath>
             </text>
           </svg>
 
           {/* Play Button */}
-          <PlayCircle  className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 text-[#00BBAE] bg-white rounded-full p-2 shadow-xl cursor-pointer hover:scale-110 transition-transform duration-300" />
+          <Play  fill="#00BBAE"
+            className="h-15 w-15 md:h-28 md:w-28 text-[#00BBAE]  bg-white rounded-full p-3 shadow-xl cursor-pointer hover:scale-110 transition-transform duration-300"
+          />
         </div>
       </div>
     </div>

@@ -28,28 +28,31 @@ const Brands = () => {
       </div>
 
       {/* Brand Row */}
-      <div className="flex flex-wrap justify-center items-center gap-14 md:gap-20">
+      <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
         {brandData.map((brand, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center gap-4 w-[120px] group"
+            className="group bg-white p-6 rounded-2xl shadow-xl w-[140px] flex flex-col items-center transition-all duration-300 hover:shadow-2xl"
           >
             {/* Circle Image Container */}
-            <div className="relative w-[100px] h-[100px] rounded-full shadow-lg bg-white overflow-hidden">
+            <div className="relative w-[100px] h-[100px] rounded-full shadow-md bg-white overflow-hidden mb-4">
               {/* Static Image */}
               <img
                 src={brand.img}
                 alt={`brand-${index}`}
                 className="absolute inset-0 m-auto h-[60px] w-[60px] object-contain transition-all duration-500 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0"
               />
-              {/* Hover Image (same image sliding up) */}
+              {/* Hover Image */}
               <img
                 src={brand.img}
                 alt={`brand-hover-${index}`}
                 className="absolute inset-0 m-auto h-[90px] w-[90px] object-contain translate-y-4 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100"
               />
             </div>
-            <h3 className="text-xl text-[#001430] font-medium">{brand.name}</h3>
+            {/* Brand Name */}
+            <h3 className="text-lg text-[#001430] font-medium text-center">
+              {brand.name}
+            </h3>
           </div>
         ))}
       </div>

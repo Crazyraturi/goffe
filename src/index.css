@@ -3,6 +3,12 @@
 
 * {
   font-family: "Baloo 2", sans-serif;
+
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  
 }
 
 @keyframes updown {

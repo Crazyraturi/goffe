@@ -2,8 +2,8 @@ import { Scroll, LandPlot, Eye } from "lucide-react";
 
 const Feature = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto  px-4 sm:px-6 md:px-8 mt-26">
-      <div className="grid gap-10 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div className="w-full max-w-7xl mt-20 mx-auto  px-4 sm:px-6 md:px-8 ">
+      <div className="grid gap-10 sm:gap-8  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
         {/* CARD 1 */}
         <FeatureCard
