@@ -1,6 +1,6 @@
 import React from "react";
 import lego from "../assets/lego.png";
-import  {ChevronRight} from"lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const OfferSection = () => {
   return (

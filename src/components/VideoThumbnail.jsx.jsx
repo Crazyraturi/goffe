@@ -35,7 +35,7 @@ const VideoThumbnail = () => {
               className="uppercase text-[15px] sm:text-[14px] md:text-[18px] font-semibold tracking-wide"
             >
               <textPath href="#circlePath" startOffset="0" textLength="470">
-                Watch Video  *  Watch Video * Watch Video *
+                Watch Video * Watch Video * Watch Video *
               </textPath>
             </text>
           </svg>
