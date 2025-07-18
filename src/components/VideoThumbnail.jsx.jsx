@@ -16,7 +16,7 @@ const VideoThumbnail = () => {
 
         <div className="relative w-24 h-24 md:w-32 md:h-32 flex items-center justify-center z-10">
           <svg
-            className="absolute animate-[spin-slow_8s_linear_infinite] w-full h-full"
+            className="absolute  animate-[spin-slow_8s_linear_infinite] w-full h-full"
             viewBox="0 0 200 200"
           >
             <defs>
@@ -27,7 +27,7 @@ const VideoThumbnail = () => {
             </defs>
             <text
               fill="white"
-              className="uppercase text-[15px] sm:text-[14px] md:text-[18px] font-semibold tracking-wide"
+              className="uppercase text-[18px] sm:text-[18px] md:text-[18px] font-semibold tracking-wide"
             >
               <textPath href="#circlePath" startOffset="0" textLength="470">
                 Watch Video * Watch Video * Watch Video *
