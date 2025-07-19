@@ -31,7 +31,7 @@ const Feature = () => {
 
 const FeatureCard = ({ Icon, title, description, bgColor }) => {
   return (
-    <div className="bg-white p-6 rounded-lg flex flex-col md:items-start items-center text-center md:text-left   group ">
+    <div className="bg-white p-6 rounded-lg flex flex-col md:items-start items-start  md:text-left   group ">
       <div
         className="relative h-[72px] w-[72px]  rounded-full"
         style={{ backgroundColor: bgColor }}
@@ -44,7 +44,7 @@ const FeatureCard = ({ Icon, title, description, bgColor }) => {
       <h2 className="text-xl md:text-2xl text-[#001430] mt-4 font-semibold text-center md:text-left">
         {title}
       </h2>
-      <p className="text-sm md:text-base text-[#69778A] mt-2 text-center md:text-left">
+      <p className="text-sm md:text-base text-[#69778A] mt-2 text-left md:text-left">
         {description}
       </p>
     </div>
