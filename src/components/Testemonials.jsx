@@ -26,6 +26,19 @@ const testimonials = [
     feedback: "Their support and attention to detail were amazing. The final result was beautiful, functional, and delivered on time.",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
   },
+
+  {
+    name: "John Doe",
+    title: "CEO at Acme Corp",
+    feedback: "This team delivered exceptional quality and professionalism. The project was completed on time, exceeding all our expectations completely. ",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+  },
+  {
+    name: "Jane Smith",
+    title: "Marketing Head",
+    feedback: "I’m genuinely impressed by their creativity, dedication, and constant communication. They brought our vision to life perfectly!",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+  },
 ];
 
 const TestimonialsPage = () => {

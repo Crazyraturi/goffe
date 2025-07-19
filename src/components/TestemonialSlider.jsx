@@ -48,7 +48,7 @@ const TestimonialSlider = ({ testimonials }) => {
   };
 
   return (
-    <div className="px-4 max-w-6xl mx-auto py-10 relative">
+    <div className="px-4 max-w-[1400px] mx-auto py-10 relative">
       <Slider {...settings}>
         {testimonials.map((item, index) => (
           <div key={index} className="px-3 group">

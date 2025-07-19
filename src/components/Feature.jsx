@@ -3,7 +3,7 @@ import { Scroll, LandPlot, Eye } from "lucide-react";
 const Feature = () => {
   return (
     <div className="w-full max-w-[1400px] mt-30 bg-[F9F9F] m-auto  px-4 sm:px-6 md:px-8 ">
-      <div className=" flex   ">
+    <div className="flex flex-col md:flex-row lg:flex-row   ">
         <FeatureCard
           Icon={Scroll}
           title="Our History"

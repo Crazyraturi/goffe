@@ -66,20 +66,34 @@ const Brands = () => {
           loop={true}
         >
           {brandData.map((brand, index) => (
-            <SwiperSlide key={index}>
-              <div className="group bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 hover:shadow">
-                <div className="relative w-[110px] h-[110px] p-1 shadow rounded-full bg-white overflow-hidden mb-4">
-                  <img
-                    src={brand.img}
-                    alt={brand.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <h3 className="text-lg text-[#001430] font-medium text-center">
-                  {brand.name}
-                </h3>
-              </div>
-            </SwiperSlide>
+ <SwiperSlide key={index}>
+  <div className="group bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 hover:shadow">
+    <div className="relative w-[110px] h-[110px] p-1 shadow rounded-full bg-white overflow-hidden mb-4">
+
+      {/* First Image (Visible by Default, Moves Up and Fades Out on Hover) */}
+      <img
+        src={brand.img}
+        alt={brand.name}
+        className="absolute inset-0 m-auto w-[80px] h-[80px] object-contain transition-all duration-500 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0"
+      />
+
+      {/* Second Image (Hidden Initially, Slides In from Below on Hover) */}
+      <img
+        src={brand.img}
+        alt={brand.name}
+        className="absolute inset-0 m-auto w-[80px] h-[80px] object-contain translate-y-4 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100"
+      />
+
+    </div>
+    <h3 className="text-lg text-[#001430] font-medium text-center">
+      {brand.name}
+    </h3>
+  </div>
+</SwiperSlide>
+
+
+
+
           ))}
         </Swiper>
       </div>
