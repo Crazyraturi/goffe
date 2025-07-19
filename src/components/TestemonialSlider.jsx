@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 // Custom Arrows
 const NextArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 -right-10 transform -translate-y-1/2 z-10 cursor-pointer bg-white p-2 rounded-full shadow-md hover:scale-110 transition"
+    className="absolute top-1/2 -right-10 transform -translate-y-1/2 z-10  cursor-pointer bg-white p-2 rounded-full shadow-md hover:scale-110 transition"
     onClick={onClick}
   >
     <ArrowRight className="text-[#00BBAE] w-5 h-5" />
@@ -48,7 +48,7 @@ const TestimonialSlider = ({ testimonials }) => {
   };
 
   return (
-    <div className="px-4 max-w-[1400px] mx-auto py-10 relative">
+    <div className="px-4 max-w-[1400px]  mx-auto py-10 relative">
       <Slider {...settings}>
         {testimonials.map((item, index) => (
           <div key={index} className="px-3 group">

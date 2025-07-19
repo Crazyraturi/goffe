@@ -26,7 +26,7 @@ const brandData = [
 
 const Brands = () => {
   return (
-    <div className="max-w-6xl mx-auto mt-10 px-4 py-10">
+    <div className="max-w-6xl mx-auto mt-20 px-4 py-10">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-[#001430]">Popular Brands</h2>
         <p className="text-[#69778A] mt-2 max-w-2xl mx-auto">

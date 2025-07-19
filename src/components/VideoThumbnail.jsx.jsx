@@ -4,7 +4,7 @@ import video from "../assets/monkey.jpg";
 
 const VideoThumbnail = () => {
   return (
-    <div className="relative mt-20 mb-20 flex items-center justify-center overflow-hidden min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
+    <div className="relative mt-25 mb-25 flex items-center justify-center overflow-hidden min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
       <img
         src={video}
         alt="video"

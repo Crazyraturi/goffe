@@ -44,7 +44,7 @@ const testimonials = [
 const TestimonialsPage = () => {
   return (
     <div >
-      <h2 className="text-center text-3xl font-bold text-[#001430] mb-8">
+      <h2 className="text-center text-3xl font-bold text-[#001430] mt-20 ">
         What Our Clients Say
       </h2>
       <TestimonialSlider testimonials={testimonials} />
