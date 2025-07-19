@@ -5,7 +5,7 @@ import { CircleUserRound } from "lucide-react";
 
 const BlogCard = ({ Image, Tag }) => {
   return (
-    <div className="w-[300px] p-1 h-auto border-[#E8E6E6] rounded-lg overflow-hidden bg-[#FFFF] shadow">
+    <div className="w-[350px] md:w-[300px] p-1 h-auto border-[#E8E6E6]mx-5 rounded-lg overflow-hidden bg-[#FFFF] shadow">
       <div className="relative p-3 rounded-lg">
         <img
           className="w-full h-60  rounded-lg object-cover"
@@ -18,7 +18,7 @@ const BlogCard = ({ Image, Tag }) => {
       </div>
 
       <div className="p-1">
-        <div className="flex items-center mt-1  w-[127px] h-[37px px-1 py-1 rounded-lg border-1 border-[#E8E6E6]  text-gray-500 gap-1">
+        <div className="flex items-center mt-1  w-[130px] h-[37px] px-1 py-1 rounded-lg border-1 border-[#E8E6E6]  text-gray-500 gap-1">
           <Calendar className="w-5 h-5 text-[#00BBAE]" />
           <span className="text-[#001430">27, Dec 2023</span>
         </div>
