@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 // Custom Arrows
 const NextArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 cursor-pointer bg-white p-2 rounded-full shadow-md hover:scale-110 transition"
+    className="absolute top-1/2 -right-10 transform -translate-y-1/2 z-10 cursor-pointer bg-white p-2 rounded-full shadow-md hover:scale-110 transition"
     onClick={onClick}
   >
     <ArrowRight className="text-[#00BBAE] w-5 h-5" />
@@ -16,7 +16,7 @@ const NextArrow = ({ onClick }) => (
 
 const PrevArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 cursor-pointer bg-white p-2 rounded-full shadow-md hover:scale-110 transition"
+    className="absolute top-1/2 -left-10 transform -translate-y-1/2 z-10 cursor-pointer bg-white p-2 rounded-full shadow-md hover:scale-110 transition"
     onClick={onClick}
   >
     <ArrowLeft className="text-[#00BBAE] w-5 h-5" />

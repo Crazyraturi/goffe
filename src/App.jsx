@@ -4,9 +4,9 @@ import BlogPage from './pages/BlogPages'
 
 const App = () => {
   return (
-    <div>
+    <div >
    <Aboutus/>
-      <BlogPage/>
+    <BlogPage/>
     </div>
   )
 }

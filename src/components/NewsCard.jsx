@@ -1,5 +1,4 @@
 import React from "react";
-import smallImg from "../assets/blog_05-150x150.jpg";
 import { Calendar } from "lucide-react";
 
 const NewsCard = ({ Image }) => {

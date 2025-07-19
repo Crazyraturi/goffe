@@ -2,8 +2,8 @@ import { Scroll, LandPlot, Eye } from "lucide-react";
 
 const Feature = () => {
   return (
-    <div className="w-full max-w-7xl mt-20 bg-[F9F9F] mx-auto  px-4 sm:px-6 md:px-8 ">
-      <div className="grid  sm:gap-8  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div className="w-full max-w-[1400px] mt-30 bg-[F9F9F] m-auto  px-4 sm:px-6 md:px-8 ">
+      <div className=" flex   ">
         <FeatureCard
           Icon={Scroll}
           title="Our History"
@@ -31,7 +31,7 @@ const Feature = () => {
 
 const FeatureCard = ({ Icon, title, description, bgColor }) => {
   return (
-    <div className="bg-white p-6 rounded-lg flex flex-col md:items-start items-center text-center md:text-left  transition-transform duration-300 group hover:-translate-y-2">
+    <div className="bg-white p-6 rounded-lg flex flex-col md:items-start items-center text-center md:text-left   group ">
       <div
         className="relative h-[72px] w-[72px]  rounded-full"
         style={{ backgroundColor: bgColor }}
