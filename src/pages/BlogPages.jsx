@@ -116,11 +116,11 @@ const Blog = () => {
         </div>
 
         {/* Categories */}
-        <div className="bg-white p-4 border border-[#E8E6E6] rounded-lg">
-          <h2 className="text-[20px] text-[#001430] font-semibold mb-2">
+        <div className="bg-white p-10 border border-[#E8E6E6] rounded-lg">
+          <h2 className="text-[25px] text-[#001430] font-semibold mb-2">
             Categories
           </h2>
-          <hr className="bg-amber-500 h-1 w-10 rounded-lg border-none mb-4" />
+          <hr className="bg-amber-500 h-1 w-10 text-[20px] rounded-lg border-none mb-4" />
           <ul className="flex flex-col font-medium gap-4">
             {[
               "Family Fun (1)",
