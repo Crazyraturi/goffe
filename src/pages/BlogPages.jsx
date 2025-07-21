@@ -17,6 +17,8 @@ import PopularNews from "../components/PopularNews";
 import Archives from "../components/Archives";
 import PopularTags from "../components/PopularTags";
 import OfferSection from "../components/OfferSection";
+import SearchBar from "../components/SearchBar";
+import Categories from "../components/Categories";
 
 const Blog = () => {
   const blogs = [
@@ -57,7 +59,10 @@ const Blog = () => {
   return (
     <div className="flex max-w-[1400px] w-full px-5 mx-auto flex-col bg-[#F9F9F9] lg:flex-row gap-10 py-10">
       {/* Left Section */}
-      <div ref={blogTopRef} className="w-full flex flex-col items-center lg:w-[70%]">
+      <div
+        ref={blogTopRef}
+        className="w-full flex flex-col items-center lg:w-[70%]"
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
           {currentBlogs.map((blog, index) => (
             <BlogCard key={index} Image={blog.Image} Tag={blog.Tag} />
@@ -89,7 +94,9 @@ const Blog = () => {
           ))}
 
           <button
-            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+            onClick={() =>
+              setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+            }
             className="px-3 py-2 bg-[#00BBAE] text-white rounded disabled:opacity-50"
             disabled={currentPage === totalPages}
           >
@@ -100,52 +107,8 @@ const Blog = () => {
 
       {/* Right Sidebar */}
       <div className="w-full lg:w-[26%] flex flex-col gap-10">
-        {/* Search Bar */}
-        <div className="relative w-full">
-          <input
-            type="text"
-            placeholder="Search blog..."
-            className="w-full pr-12 pl-4 py-3 border border-[#E8E6E6] bg-white text-black placeholder:text-gray-500 rounded-lg outline-none"
-          />
-          <button
-            type="submit"
-            className="absolute top-1/2 -translate-y-1/2 right-2 bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-lg transition"
-          >
-            <Search size={20} />
-          </button>
-        </div>
-
-        {/* Categories */}
-        <div className="bg-white p-10 border border-[#E8E6E6] rounded-lg">
-          <h2 className="text-[25px] text-[#001430] font-semibold mb-2">
-            Categories
-          </h2>
-          <hr className="bg-amber-500 h-1 w-10 text-[20px] rounded-lg border-none mb-4" />
-          <ul className="flex flex-col font-medium gap-4">
-            {[
-              "Family Fun (1)",
-              "Kids Activities (1)",
-              "Learn & Inspire (1)",
-              "Tips & Tricks (1)",
-              "Top Toys (5)",
-              "Toy Reviews (2)",
-              "Toy Trends (3)",
-            ].map((item, index) => (
-              <li
-                key={index}
-                className="group relative flex items-center gap-2 pl-6 cursor-pointer text-gray-500 hover:translate-x-2 transition-all"
-              >
-                <span className="absolute left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <MoveRight className="text-[#00BBAE]" size={16} />
-                </span>
-                <a className="group-hover:text-[#00BBAE] transition-colors">
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
+        <SearchBar />
+        <Categories />
         <PopularNews />
         <Archives />
         <PopularTags />
