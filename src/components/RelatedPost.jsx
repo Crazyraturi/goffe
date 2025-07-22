@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import BI1 from "../assets/blogimg/bi1.jpg";
 import BI2 from "../assets/blogimg/bi2.jpg";
@@ -12,6 +14,13 @@ import BI4 from "../assets/blogimg/bi4.jpg";
 import BlogCard from "../components/BlogCard";
 
 const RelatedPost = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  useEffect(() => {
+    // Swiper navigation ref must be set after component mounts
+  }, []);
+
   return (
     <div className="w-full px-4 py-4">
       {/* Header */}
@@ -20,30 +29,78 @@ const RelatedPost = () => {
         <div className="h-1 w-10 bg-[#00BBAE] rounded-lg"></div>
       </div>
 
-      {/* Swiper for mobile & grid for large */}
-      <div className="lg:hidden">
+      {/* Mobile/Tablet Swiper */}
+      <div className="lg:hidden relative">
+        {/* Custom navigation buttons */}
+        <div className="absolute top-1/2 -left-4 z-10 transform -translate-y-1/2">
+          <button
+            ref={prevRef}
+            className="bg-white shadow-md border border-gray-300 rounded-full p-2 hover:bg-[#00BBAE] transition-all duration-200"
+          >
+            <ArrowLeft size={20} className="text-[#00BBAE] hover:text-white" />
+          </button>
+        </div>
+
+        <div className="absolute top-1/2 -right-4 z-10 transform -translate-y-1/2">
+          <button
+            ref={nextRef}
+            className="bg-white shadow-md border border-gray-300 rounded-full p-2 hover:bg-[#00BBAE] transition-all duration-200"
+          >
+            <ArrowRight size={20} className="text-[#00BBAE] hover:text-white" />
+          </button>
+        </div>
+
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={16}
-        slidesPerView={1}
           pagination={{ clickable: true }}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              centeredSlides: true,
+            },
+            768: {
+              slidesPerView: 2,
+              centeredSlides: true,
+            },
+          }}
         >
-          <SwiperSlide>
+          <SwiperSlide className="flex justify-center">
             <BlogCard Image={BI1} Tag={"Top Toys"} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex justify-center">
             <BlogCard Image={BI2} Tag={"Family Fun"} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex justify-center">
             <BlogCard Image={BI3} Tag={"Learn and Inspire"} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex justify-center">
+            <BlogCard Image={BI4} Tag={"Kids Activities"} />
+          </SwiperSlide>
+             <SwiperSlide className="flex justify-center">
+            <BlogCard Image={BI1} Tag={"Top Toys"} />
+          </SwiperSlide>
+          <SwiperSlide className="flex justify-center">
+            <BlogCard Image={BI2} Tag={"Family Fun"} />
+          </SwiperSlide>
+          <SwiperSlide className="flex justify-center">
+            <BlogCard Image={BI3} Tag={"Learn and Inspire"} />
+          </SwiperSlide>
+          <SwiperSlide className="flex justify-center">
             <BlogCard Image={BI4} Tag={"Kids Activities"} />
           </SwiperSlide>
         </Swiper>
       </div>
 
-      {/* Grid for tablets and PCs */}
+      {/* Desktop Grid */}
       <div className="hidden lg:grid grid-cols-4 gap-7">
         <BlogCard Image={BI1} Tag={"Top Toys"} />
         <BlogCard Image={BI2} Tag={"Family Fun"} />
