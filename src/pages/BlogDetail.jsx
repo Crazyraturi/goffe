@@ -54,9 +54,10 @@ const BlogDetail = () => {
 
       </div>
 
-      <div className="relative  max-w-[1400px]   bg-[#F9F9F9] mt-20 mx-auto">
-        <RelatedPost />
-     </div>
+    <div className="relative max-w-[1400px] mx-auto mt-20 bg-[#F9F9F9] px-4 sm:px-6 md:px-8 py-10 rounded-xl shadow-sm">
+  <RelatedPost />
+</div>
+
     </div>
   );
 };
