@@ -13,13 +13,13 @@ const NewsCard = ({ Image }) => {
       </div>
 
       <div className="flex flex-col">
-        <h1 className="font-medium  max-w-[250px] hover:text-[#00BBAE] line-clamp-2 leading-tight">
+        <h1 className="font-medium  text-[16px] leading-tight line-clamp-2 md:line-clamp-none hover:text-[#00BBAE]">
           Toy Emporium: Playful Picks for Kids’ Delightful Days
         </h1>
 
-        <div className="flex items-center  text-gray-500 gap-1 mt-2">
+        <div className="flex items-center text-gray-500 gap-1 mt-2">
           <Calendar className="w-5 h-5 text-[#00BBAE]" />
-          <span className=" text-[14px]">27, Dec 2023</span>
+          <span className="text-[14px]">27, Dec 2023</span>
         </div>
       </div>
     </div>
