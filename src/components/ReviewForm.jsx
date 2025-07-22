@@ -1,124 +1,49 @@
-import React, { useState } from "react";
-
 const ReviewForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    comment: "",
-    agreed: false,
-  });
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!formData.agreed) {
-      alert("Please agree to the terms and conditions.");
-      return;
-    }
-
-    // Do something with formData (e.g. API call)
-    console.log("Submitted Data:", formData);
-    alert("Comment submitted!");
-
-    // Optional: reset form
-    setFormData({
-      name: "",
-      email: "",
-      comment: "",
-      agreed: false,
-    });
-  };
-
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow-md space-y-5"
-    >
-      <h2 className="text-2xl font-bold text-gray-800">Leave a Review</h2>
-
-      {/* Name */}
+  <div className="w-full flex flex-col p-8 gap-6">
+      {/* Title */}
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-          Name
-        </label>
+        <h2 className="text-[26px] font-semibold">Write a Review</h2>
+        <p className="text-[#69778A]">
+          Your email address will not be published. Required fields are marked *
+        </p>
+      </div>
+
+      {/* Comment Box */}
+      <textarea
+        className="w-full border border-[#E8E6E6] rounded-lg px-5 py-5"
+        placeholder="Comment*"
+      />
+
+      {/* Name and Email */}
+      <div className="flex flex-col lg:flex-row gap-5">
         <input
+          className="w-full border border-[#E8E6E6] rounded-lg px-5 py-5"
           type="text"
-          name="name"
-          id="name"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Your Name"
-          className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Name*"
         />
-      </div>
-
-      {/* Email */}
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-          Email
-        </label>
         <input
+          className="w-full border border-[#E8E6E6] rounded-lg px-5 py-5"
           type="email"
-          name="email"
-          id="email"
-          required
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="your@email.com"
-          className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Email*"
         />
-      </div>
-
-      {/* Comment */}
-      <div>
-        <label htmlFor="comment" className="block text-sm font-medium text-gray-700 mb-1">
-          Comment
-        </label>
-        <textarea
-          name="comment"
-          id="comment"
-          rows="4"
-          required
-          value={formData.comment}
-          onChange={handleChange}
-          placeholder="Write your comment here..."
-          className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        ></textarea>
       </div>
 
       {/* Checkbox */}
-      <div className="flex items-start space-x-2">
-        <input
-          type="checkbox"
-          id="agreed"
-          name="agreed"
-          checked={formData.agreed}
-          onChange={handleChange}
-          className="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-        />
-        <label htmlFor="agreed" className="text-sm text-gray-700">
-          I agree to the terms and conditions.
+      <div className="flex gap-2 items-start">
+        <input type="checkbox" name="condition" id="condition" />
+        <label htmlFor="condition" className="text-[#69778A]">
+          Save my name, email, and website in this browser for the next time I comment.
         </label>
       </div>
 
-      {/* Submit Button */}
-      <button
-        type="submit"
-        className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition duration-200"
-      >
+      {/* Button */}
+      <button className="w-fit bg-[#00BBAE] hover:bg-amber-500 text-white text-[18px] font-medium py-4 px-6 rounded-lg">
         Post Comment
       </button>
-    </form>
+    </div>
   );
 };
+
 
 export default ReviewForm;
