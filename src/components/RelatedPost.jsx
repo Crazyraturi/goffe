@@ -17,31 +17,24 @@ const RelatedPost = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  useEffect(() => {
-    // Swiper navigation ref must be set after component mounts
-  }, []);
-
   return (
     <div className="w-full px-4 py-4">
-      {/* Header */}
-      <div className="flex items-center gap-4 mb-6">
-        <h2 className="text-[26px] font-semibold">Related Post</h2>
-        <div className="h-1 w-10 bg-[#00BBAE] rounded-lg"></div>
-      </div>
+      {/* Header with Buttons (Mobile/Tablet only) */}
+      <div className="flex items-center justify-between mb-6 lg:mb-10">
+        {/* Left: Heading */}
+        <div className="flex items-center gap-4">
+          <h2 className="text-[26px] font-semibold">Related Post</h2>
+          <div className="h-1 w-10 bg-[#00BBAE] rounded-lg"></div>
+        </div>
 
-      {/* Mobile/Tablet Swiper */}
-      <div className="lg:hidden relative">
-        {/* Custom navigation buttons */}
-        <div className="absolute top-1/2 -left-4 z-10 transform -translate-y-1/2">
+        {/* Right: Buttons (only visible on mobile and tab) */}
+        <div className="flex gap-2 lg:hidden">
           <button
             ref={prevRef}
             className="bg-white shadow-md border border-gray-300 rounded-full p-2 hover:bg-[#00BBAE] transition-all duration-200"
           >
             <ArrowLeft size={20} className="text-[#00BBAE] hover:text-white" />
           </button>
-        </div>
-
-        <div className="absolute top-1/2 -right-4 z-10 transform -translate-y-1/2">
           <button
             ref={nextRef}
             className="bg-white shadow-md border border-gray-300 rounded-full p-2 hover:bg-[#00BBAE] transition-all duration-200"
@@ -49,7 +42,10 @@ const RelatedPost = () => {
             <ArrowRight size={20} className="text-[#00BBAE] hover:text-white" />
           </button>
         </div>
+      </div>
 
+      {/* Mobile/Tablet Swiper */}
+      <div className="lg:hidden">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={16}
@@ -85,7 +81,7 @@ const RelatedPost = () => {
           <SwiperSlide className="flex justify-center">
             <BlogCard Image={BI4} Tag={"Kids Activities"} />
           </SwiperSlide>
-             <SwiperSlide className="flex justify-center">
+          <SwiperSlide className="flex justify-center">
             <BlogCard Image={BI1} Tag={"Top Toys"} />
           </SwiperSlide>
           <SwiperSlide className="flex justify-center">
@@ -100,7 +96,7 @@ const RelatedPost = () => {
         </Swiper>
       </div>
 
-      {/* Desktop Grid */}
+      {/* Desktop Grid View */}
       <div className="hidden lg:grid grid-cols-4 gap-7">
         <BlogCard Image={BI1} Tag={"Top Toys"} />
         <BlogCard Image={BI2} Tag={"Family Fun"} />
