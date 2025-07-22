@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -46,54 +46,50 @@ const RelatedPost = () => {
 
       {/* Mobile/Tablet Swiper */}
       <div className="lg:hidden">
-        <Swiper
-          modules={[Navigation, Pagination]}
-          spaceBetween={16}
-          pagination={{ clickable: true }}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-          }}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-              centeredSlides: true,
-            },
-            768: {
-              slidesPerView: 2,
-              centeredSlides: true,
-            },
-          }}
-        >
-          <SwiperSlide className="flex justify-center">
-            <BlogCard Image={BI1} Tag={"Top Toys"} />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <BlogCard Image={BI2} Tag={"Family Fun"} />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <BlogCard Image={BI3} Tag={"Learn and Inspire"} />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <BlogCard Image={BI4} Tag={"Kids Activities"} />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <BlogCard Image={BI1} Tag={"Top Toys"} />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <BlogCard Image={BI2} Tag={"Family Fun"} />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <BlogCard Image={BI3} Tag={"Learn and Inspire"} />
-          </SwiperSlide>
-          <SwiperSlide className="flex justify-center">
-            <BlogCard Image={BI4} Tag={"Kids Activities"} />
-          </SwiperSlide>
-        </Swiper>
+       <Swiper
+  modules={[Navigation, Pagination]}
+  spaceBetween={16}
+  pagination={{ clickable: true }}
+  navigation={{
+    prevEl: prevRef.current,
+    nextEl: nextRef.current,
+  }}
+  onBeforeInit={(swiper) => {
+    swiper.params.navigation.prevEl = prevRef.current;
+    swiper.params.navigation.nextEl = nextRef.current;
+  }}
+  breakpoints={{
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+  }}
+  className="!flex justify-center"
+>
+  <SwiperSlide className="!flex justify-center">
+    <div className="w-fit mx-auto">
+      <BlogCard Image={BI1} Tag={"Top Toys"} />
+    </div>
+  </SwiperSlide>
+  <SwiperSlide className="!flex justify-center">
+    <div className="w-fit mx-auto">
+      <BlogCard Image={BI2} Tag={"Family Fun"} />
+    </div>
+  </SwiperSlide>
+  <SwiperSlide className="!flex justify-center">
+    <div className="w-fit mx-auto">
+      <BlogCard Image={BI3} Tag={"Learn and Inspire"} />
+    </div>
+  </SwiperSlide>
+  <SwiperSlide className="!flex justify-center">
+    <div className="w-fit mx-auto">
+      <BlogCard Image={BI4} Tag={"Kids Activities"} />
+    </div>
+  </SwiperSlide>
+</Swiper>
+
       </div>
 
       {/* Desktop Grid View */}
